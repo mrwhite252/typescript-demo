@@ -1,13 +1,12 @@
+// class
 class Invoice {
-  client: string;
-  details: string;
-  amount: number;
+  // use access modifier to simplify the code:
 
-  constructor(client: string, details: string, amount: number) {
-    this.client = client;
-    this.details = details;
-    this.amount = amount;
-  }
+  constructor(
+    readonly client: string,
+    private details: string,
+    public amount: number
+  ) {}
 
   format() {
     return `${this.client} owes $ ${this.amount} for ${this.details}`;
@@ -18,6 +17,8 @@ const invoiceOne = new Invoice("David", "copyright work", 250);
 const invoiceTwo = new Invoice("Steven", "design work", 300);
 
 console.log(invoiceOne, invoiceTwo);
+
+let invoices: Invoice[] = [];
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
 

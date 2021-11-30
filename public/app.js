@@ -1,5 +1,7 @@
 "use strict";
+// class
 class Invoice {
+    // use access modifier to simplify the code:
     constructor(client, details, amount) {
         this.client = client;
         this.details = details;
@@ -12,6 +14,7 @@ class Invoice {
 const invoiceOne = new Invoice("David", "copyright work", 250);
 const invoiceTwo = new Invoice("Steven", "design work", 300);
 console.log(invoiceOne, invoiceTwo);
+let invoices = [];
 const form = document.querySelector(".new-item-form");
 // inputs
 const type = document.querySelector("#type");
