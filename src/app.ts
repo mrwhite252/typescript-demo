@@ -1,3 +1,5 @@
+// interfaces
+
 import { Invoice } from "./classes/invoice.js";
 
 const invoiceOne = new Invoice("David", "copyright work", 250);
