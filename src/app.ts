@@ -1,17 +1,4 @@
-// class
-class Invoice {
-  // use access modifier to simplify the code:
-
-  constructor(
-    readonly client: string,
-    private details: string,
-    public amount: number
-  ) {}
-
-  format() {
-    return `${this.client} owes $ ${this.amount} for ${this.details}`;
-  }
-}
+import { Invoice } from "./classes/invoice.js";
 
 const invoiceOne = new Invoice("David", "copyright work", 250);
 const invoiceTwo = new Invoice("Steven", "design work", 300);

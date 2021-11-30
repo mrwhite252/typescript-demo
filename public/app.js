@@ -1,16 +1,4 @@
-"use strict";
-// class
-class Invoice {
-    // use access modifier to simplify the code:
-    constructor(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    format() {
-        return `${this.client} owes $ ${this.amount} for ${this.details}`;
-    }
-}
+import { Invoice } from "./classes/invoice.js";
 const invoiceOne = new Invoice("David", "copyright work", 250);
 const invoiceTwo = new Invoice("Steven", "design work", 300);
 console.log(invoiceOne, invoiceTwo);
